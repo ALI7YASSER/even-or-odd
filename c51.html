@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: #432982;
+            color: white;
+            font-family: 'Dhurjati', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            font-size: 30px;
+            background-color: #53567B;
+            border-radius: 20px;
+            border: #7278AF solid;
+            margin-top: 30px;
+        }
+
+        .game {
+            margin: auto;
+            max-width: 400px;
+        }
+
+        button {
+            background-color: #FD8E4A;
+            color: white;
+            border: #f0ebbb solid;
+            font-size: 25px;
+            border-radius: 20px;
+            font-family: 'Dhurjati', sans-serif;
+            padding: 0 20px;
+        }
+
+        button:hover {
+            background-color: #ffae7b;
+        }
+
+        .userControl {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container>p {
+            margin: 0;
+        }
+
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <h1 id="display">Even or odd game! 😉</h1>
+        <div class="container">
+            <p>Attemtps</p>
+            <p id="attempts">0</p>
+        </div>
+        <div class="container">
+            <p>Score</p>
+            <p id="score">0</p>
+        </div>
+
+        <h2>I think of a number do you think it is odd or even?</h2>
+        <div class="userControl">
+            <button onclick="guess('even')">Even</button>
+            <button onclick="guess('odd')">Odd</button>
+        </div>
+    </div>
+
+    <audio src="./correct.mp3" id="correct"></audio>
+    <audio src="./wrong.mp3" id="wrong"></audio>
+
+    <script src="./c51.js"></script>
+</body>
+
+</html>
